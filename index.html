@@ -4,139 +4,189 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="style.css" rel="stylesheet">
+
+  <!--p5.jsとエフェクトの読み込み処理-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <script src="hero-effect.js"></script>
+
   <title>Kafk-A-noob(KafkA)のポートフォリオ</title>
-      <img
-    src="https://progedu.github.io/forum-ranking/assets/images/logo-z.svg"
-    alt="ZEN Study のロゴ"><br>
-    <h3>このページについて</h3>
-    <p>
-    このページは、株式会社ドワンゴが運営する<br>
-    ZEN Studyの「プログラミング入門 Webアプリケーション開発-1」<br>
-    のテキスト内容をベースに作成されています。<br>
-    </p>
 </head>
 
+<!--p5.jsとエフェクトの読み込み処理-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <script src="hero-effect.js"></script>
+
 <body>
-  <h1>Kafk-A-noob(KafkA)</h1>
 
-  <h2>About</h2>
-    <p>
-      先述の経緯により、ポートフォリオを作成することになりました。<br>
-      ただのしがない一般人ですが、これから少しづつできることを増やしていこうと考えています。<br>
-      また、個人情報の観点から本名の公開は差し控えます。ご了承ください。<br>
-    </p>
 
-  <h3>Profile</h3>
-  <ul>
-    <li>名前:Kafk-A-noob (KafkA)</li>
-    <li>出身:神奈川県横浜市</li>
-    <li>所在地:大阪府大阪市</li>
-    <li>志望(現状):フロントエンドから入りバックエンドを通りつつ学んでいきたいと思っています。</li>
-    <li>趣味:ゲーム,料理等</li>
-  </ul>
-
-  <h3>Skils(経験が浅いので触ったことのあるものを記載します。)</h3>
-  <table>
-    <tr>
-      <th>OS</th>
-      <td>Windows:自作PCを組み立てられるレベル</td>
-    </tr>
-
-    <tr>
-      <th>Lang</th>
-      <td>JavaScript:まだテキストを書き写す程度</td>
-      <td>HTML:同上</td>
-      <td>CSS:同上</td>
-    </tr>
-
-    <tr>
-      <th>Frameworks</th>
-      <td>Unity:特定の条件下でオブジェクト等の設定をしたりできる程度</td>
-    </tr>
-
-    <tr>
-      <th>Tool</th>
-      <td>Visual Studio Code:使用してこのサイトなどを作っています。</td>
-      <td>GitHub:ZEN Studyで作成した一部を載せています。</td>
-      <td>Blender:特定状況下で動作するオブジェクトを多少製作できる程度</td>
-      <td>GIMP:テクスチャを合成する程度</td>
-      <td>Krita:同上</td>
-    </tr>
-
-    <tr>
-      <th>Others</th>
-      <td>Discord:プライベートにてコミュニケーションツールとして使用。</td>
-      <td>ChatGPT:複数の社会的制度が絡み合った際の相談、Unityで扱うU#の素になるC#を出力させるために使用。</td>
-      <td>Slack:多少触ったことがある程度</td>
-      <td>Zoom,Teams,GoogleMeet:通常使用に問題なし</td>
-    </tr>
-  </table>
-
-  <h3>Works</h3>
-  <p>仕事といえるほど大したものではありませんが、VRゲーム向けの衣装作成、販売経験が少々あります。</p>
-  <ul>
-    <li><a href="https://github.com/Kafk-A-noob" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-    <li><a href="https://kafsfactory.booth.pm/" target="_blank" rel="noopener noreferrer">BOOTH</a></li>
-    <li>
-      作った作品
-      <ul>
-        <li><a 
-          href="https://kafk-a-noob.github.io/assessment/assessment.html" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          >あなたのいいところ診断(ZEN Study)
-            </a>
-        </li>
-        <li>
-          <a href="https://kafsfactory.booth.pm/items/7162373" 
-           target="_blank" 
-           rel="noopener noreferrer"
-          >VRゲーム用衣装
-          </a>
-        </li>
+  <!-- ナビゲーション -->
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#plofile">Profile</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#backGroundEffect">背景について</a></li>
+        <li><a href="#last">最後に</a></li>
       </ul>
-  </ul>
+    </nav>
 
-  <h3>Histry</h3>
-  <p>2014年に県立高校普通科卒業後、職人養成所に2年半通いつつ飲食店アルバイトを経験。<br>
-    大阪に転居後は館内配送アルバイトを半年経験の後就職。その後転職し今に至る。
-  </p>
-  <table>
-    <tr>
-      <th>2014 年</th>
-      <td>神奈川県立新羽高等学校 卒業</td>
-    </tr>
-    <tr>
-      <th>2016 年頃</th>
-      <td>ESPギタークラフト・アカデミー 中退</td>
-    </tr>
-    <tr>
-      <th>2018 年 6月～10月頃</th>
-      <td>大阪に転居し、館内配送アルバイトに従事</td>
-    </tr>
-    <tr>
-      <th>2019 年</th>
-      <td>一身上の都合により館内配送アルバイトから異業種の製造業に就職</td>
-    </tr>
-    <tr>
-      <th>2022 年</th>
-      <td>1社目を病気療養の為退職</td>
-    </tr>
-    <tr>
-      <th>2023 年</th>
-      <td>知人の紹介で現職へ社会復帰 CADオペレーターとして従事(在宅勤務)</td>
-    </tr>
-    <tr>
-      <th>2025 年</th>
-      <td>会社都合により転職活動中 9月末退職予定</td>
-    </tr>
-  </table>
-    <h3>最後に</h3>
-    <p>
-      これまで様々なことがありました。<br>
-      成績優秀とは言えず、人付き合いもあまり得意ではありませんでしたし、自分に自信があるわけではありません。<br>
-      しかし、「今日に至るまでこんな自分を導いてくれた先達が伝えたかった事を探しに行こう」と思えるようになったこと。<br>
-      そして今までに触れた事柄、まだ見ぬ世界への好奇心を大切に歩んでいく所存です。
-    </p>
+  <!-- ヒーローセクション -->
+    <header class="hero">
+      <img
+      src="https://progedu.github.io/forum-ranking/assets/images/logo-z.svg"
+      alt="ZEN Study のロゴ" class="hero-logo">
+      <h1>Kafk-A-noob(KafkA)</h1>
+      <p class="hero-sudtitle">まずフロントエンドへ、そこからバックエンドへ。一歩一歩学びながら成長中</p>
+    </header>
+
+    <main>
+      <!-- About -->
+        <section id="about">
+          <h2>About</h2>
+          <p>
+            このページは、株式会社ドワンゴが運営する
+            ZEN Studyの「プログラミング入門 Webアプリケーション開発-1」
+            のテキスト内容をベースに作成されています。<br>
+            初学者ですが、これから少しづつできることを増やしていこうと考えています。<br>
+          </p>
+        </section>
+
+    <!-- Profile -->
+    <section id="profile">
+      <h2>Profile</h2>
+      <ul>
+        <li>名前: Kafk-A-noob (KafkA)</li>
+        <li>出身: 神奈川県横浜市</li>
+        <li>所在地: 大阪府大阪市</li>
+        <li>志望: フロントエンドから入り、バックエンドも学びたい。</li>
+        <li>趣味: ゲーム,料理等</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+      <section id="skills">
+        <h2>Skils</h2>
+        <p>※現時点では経験が浅い為、触ったことのあるものを記載しています。</p>
+        <table>
+          <tr>
+            <th>OS</th>
+            <td>Windows:自作PC組立レベル</td>
+          </tr>
+        
+          <tr>
+            <th>Languages</th>
+            <td>JavaScript: テキスト通りにかけるレベル</td>
+            <td>HTML: 同上</td>
+            <td>CSS: 同上</td>
+          </tr>
+        
+          <tr>
+            <th>Frameworks</th>
+            <td>Unity: 特定の条件下でオブジェクト等の設定可能</td>
+          </tr>
+        
+          <tr>
+            <th>Tool</th>
+            <td>Visual Studio Code: サイト作成に使用</td>
+            <td>GitHub: ZEN Studyでの学習成果物掲載</td>
+            <td>Blender: 特定状況下で動作するオブジェクトの製作可能</td>
+          </tr>
+        
+          <tr>
+            <th>Others</th>
+            <td>Discord: プライベートにてコミュニケーションツールとして使用。</td>
+            <td>ChatGPT: 込み入った内容の相談、Unityでの作業補助に使用。</td>
+            <td>Slack: 多少の経験あり</td>
+            <td>Zoom,Teams,GoogleMeet: 通常使用に問題なし</td>
+          </tr>
+        </table>
+      </section>
+
+    <!-- Works -->
+      <section id="works">
+        <h2>Works</h2>
+        <p>VRゲーム向けの衣装作成、販売経験があります。</p>
+        <ul>
+          <li><a href="https://github.com/Kafk-A-noob" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://kafsfactory.booth.pm/" target="_blank" rel="noopener noreferrer">BOOTH</a></li>
+          <li>
+            作った作品:
+            <ul>
+              <li><a 
+                href="https://kafk-a-noob.github.io/assessment/assessment.html" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                >あなたのいいところ診断(ZEN Study)
+                  </a>
+              </li>
+              <li>
+                <a href="https://kafsfactory.booth.pm/items/7162373" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                >VRゲーム用衣装
+                </a>
+              </li>
+            </ul>
+        </ul>
+      </section>
+
+    <!-- History -->
+      <section id="history">
+        <h2>Histry</h2>
+        <p>
+          2014年 高校卒業後、職人養成所、アルバイト、製造業を経て現職へ。<br>
+          2025年9月末で退職予定。次のステップに向け学習中。
+        </p>
+        <table>
+          <tr>
+            <th>2014</th>
+            <td>神奈川県立新羽高等学校 卒業</td>
+          </tr>
+          <tr>
+            <th>2016</th>
+            <td>ESPギタークラフト・アカデミー 中退</td>
+          </tr>
+          <tr>
+            <th>2019</th>
+            <td>製造業に就職</td>
+          </tr>
+          <tr>
+            <th>2022</th>
+            <td>病気療養の為製造業を退職</td>
+          </tr>
+          <tr>
+            <th>2023</th>
+            <td>知人の紹介で現職へ社会復帰 CADオペレーターとして従事</td>
+          </tr>
+          <tr>
+            <th>2025</th>
+            <td>会社都合により退職予定</td>
+          </tr>
+        </table>
+      </section>
+
+    <!--OpenProcessing-->
+      <section id="backGroundEffect">
+        <h2>背景について</h2>
+          <p>
+            このポートフォリオの背景は、OpenProcessingを使用して作成されています。<br>
+            当初はZEN Studyのテキストの内容に沿ったものでしたが、納得がいかなかったのでChatGPTとCopilotと相談しつつ、解説を受けながら作成しました。
+          </p>
+          <iframe src="https://openprocessing.org/sketch/2717081/embed/" width="400" height="400"></iframe>
+      </section>
+
+    <!-- Last -->
+      <section id="last">
+        <h2>最後に</h2>
+        <p>
+          これまでの経験を通して、決して順調とは言えない道を歩んできましたが、  
+          その中で「学び続ける姿勢」と「新しい世界への好奇心」を大切にしてきました。  
+          これからも少しずつ挑戦を重ね、より良い未来を築いていきたいと考えています。
+        </p>
+      </section>
+    </main>
+  <script src="hero-effect.js"></script>
 </body>
 </html>
