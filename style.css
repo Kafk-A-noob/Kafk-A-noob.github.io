@@ -1,77 +1,219 @@
-/* --------------------
-        全体
--------------------- */
+/* ==============================
+   グローバル設定
+============================== */
 
-:root {
-  --theme-color: #00a0a0;
+  /*テーマカラー(全体の基調色)*/
+  :root {
+    --theme-color: #e63946; /* コーラル寄り赤 */
+  }
+
+  /* デフォルト設定 */
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    /* 全体レイアウト */
+    max-width: 960px;           /* 読みやすさのため幅制限 */
+    margin: auto;               /* 中央寄せ */
+    padding: 30px;
+    color: #333;
+    font-family: 'Noto Sans JP', sans-serif; /* Google Fonts 推奨 */
+    line-height: 1.7;           /* 行間を広めに */
+    background: #fdfdfd;      /* やや柔らかい背景 */
+  }
+
+/* ==============================
+   ナビゲーション
+============================== */
+
+  nav {
+      background: var(--theme-color);
+      padding: 10px 20px;
+      margin-bottom: 20px;
+    }
+
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.2s;
+  }
+
+  .nav-menu li a:hover {
+    opacity: 0.8;
+  }
+
+  /* ==============================
+   ヒーローセクション
+============================== */
+
+  .hero {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden; /* canvas がはみ出るのを隠す */
+  }
+
+  /* p5 が生成する canvas は .hero の子要素になるため、以下で背面に回す */
+
+  .hero canvas {
+    position: absolute !important; /* p5 が付ける style を上書き */
+    top: 0;
+    left: 0;
+    z-index: 0; /* テキストより後ろにする */
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none; /* マウス操作を邪魔しない */
+  }
+
+  #hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* テキストより背面 */
+    opacity: 0.3; /* 控えめな透過 */
+  }
+
+  .hero-logo {
+    max-width: 150px;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  .hero > *:not(canvas) {
+    position: relative;
+    z-index: 2;
+  }
+
+/* ==============================
+   セクション
+============================== */
+
+/*body にもエフェクトが出るように*/
+
+body > canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
 }
 
-* {
-  box-sizing: border-box;
-}
+  section {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2.5rem;
+    padding:  1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba( 0, 0, 0, 0.05);
+  }
 
-html, body {
-  width: 100%;
-  height: 100%;
-}
+  h1, h2, h3 {
+    color: var(--theme-color);
+    border-bottom: 2px solid 0.1em var(--theme-color); /* 実線で強調 */
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
 
-body {
-  margin: 0;
-  padding: 30px;
-  color: #333;
-}
+/* ==============================
+   リンク
+============================== */
+  
+  a {
+    color: var(--theme-color);
+    text-decoration: none;
+    transition: color 0.2s ease;;
+  }
+  
+  a:hover {
+    color: #007777;  /* ホバー時に少し濃く */
+    text-decoration: underline;
+  }
+  
+  /* ==============================
+     リスト
+  ============================== */
+  
+  ul {
+    list-style: none;
+    padding-left: 1rem; /* 星アイコン用のインデント */
+  }
+  
+  li:before {
+    content: "★";
+    color: var(--theme-color);
+    margin-right: 0.4rem;
+  }
 
-/* --------------------
-        見出し
--------------------- */
+/* ==============================
+   表
+============================== */
 
-h1, h2, h3 {
-  color: var(--theme-color);
-  border-bottom: dashed 0.1em var(--theme-color);
-}
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: solid 1px #f0f0f0;
+    min-width: 70%;
+    margin: 1rem 0;
+  }
 
-/* --------------------
-        リンク
--------------------- */
+  tr {
+    background-color: #fff;
+  }
+  tr:nth-child(2n) {
+    background-color: #f9f9f9;
+  }
 
-a {
-  color: var(--theme-color);
-  text-decoration: none;
-}
+  th {
+    background: var(--theme-color);
+    color: #fff;
+  }
 
-/* --------------------
-        リスト
--------------------- */
+  th, td {
+    border: solid 1px #f0f0f0;
+    padding: 0.5rem;
+    text-align: left;
+  }
 
-ul {
-  list-style: none;
-}
-li:before {
-  content: "★";
-  color: var(--theme-color);
-}
+/* ==============================
+   レスポンシブ対応（スマホ用）
+============================== */
 
-/* --------------------
-          表
--------------------- */
-
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-  border: solid 1px #f0f0f0;
-  min-width: 70%;
-}
-tr {
-  background-color: #fff;
-}
-tr:nth-child(2n) {
-  background-color: #f9f9f9;
-}
-th {
-  background: var(--theme-color);
-  color: #fff;
-}
-th, td {
-  border: solid 1px #f0f0f0;
-  padding: 0.5rem;
-}
+  @media (max-width: 600px) {
+    body {
+      padding: 15px;
+    }
+    section {
+      padding: 1rem;
+    }
+    table {
+      font-size: 0.9rem;
+    }
+  }
